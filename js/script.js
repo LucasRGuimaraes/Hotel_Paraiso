@@ -50,7 +50,7 @@ function cadastrar() {
   if (email.value != "") {
     alert(`Seu email foi cadastrado: ${email.value}`)
   } else {
-    alert(`PREENCHE ALGO NEH ARROMBADO!`)
+    alert(`Preencha o campo por favor!`)
   }
 }
 
