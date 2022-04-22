@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/51f7ea6787.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Hotel Paraiso</title>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="img/logo.png" alt="Hotel Paraiso"></a>
+        <nav>
+            <li><a onclick="nome('home')">Home</a></li>
+            <li><a onclick="nome('sobre')">Sobre</a></li>
+            <li><a onclick="nome('reserva')">Reservas</a></li>
+            <li><a onclick="nome('contato')">Contato</a></li>
+        </nav>
+    </header>
+    <section class="introducao">
+        <h1>Conheça este paraiso chamado Itacaré</h1>
+        <h3>"Aconchego, conforto, simpatia e alto astral"</h3>
+        <a href="#" class="botao">Saiba mais</a>
+    </section>
+    <section class="hotel" id="sobre">
+        <h3>Conheça o Hotel Paraiso!</h3>
+        <p>Feche os olhos e imagine o paraíso. Um lugar no meio da Mata Atlantica e banhado pelo mar, onde voce encontra
+            paz, tranquilidade, conforto e comobidade.</p>
+        <hr>
+        <div class="grid">
+            <div class="small">
+                <img class="imagem" id="itacare01" src="img/itacare-01.jpg" alt="Itacare 01"
+                    onclick="openModal('itacare01')">
+            </div>
+            <div class="large">
+                <img class="imagem" id="itacare02" src="img/itacare-02.jpg" alt="Itacare 02"
+                    onclick="openModal('itacare02')">
+            </div>
+            <div class="large">
+                <img class="imagem" id="itacare03" src="img/itacare-03.jpg" alt="Itacare 03"
+                    onclick="openModal('itacare03')">
+            </div>
+            <div class="small">
+                <img class="imagem" id="itacare04" src="img/itacare-04.jpg" alt="Itacare 04"
+                    onclick="openModal('itacare04')">
+            </div>
+            <div id="modalImagens" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-imagem" id="img01">
+                <div id="caption"></div>
+            </div>
+        </div>
+    </section>
+    <section class="caracteristicas">
+        <h3>Unico hotel pe na areia de Itacare</h3>
+        <p>Implantado em uma area completamente arbonizada, o Hotel Paraiso é o unico hotel pé na areia de Itacare. Aqui
+            o Mar sera o o seu companheiro e voce tera as belezas da natureza como guia.</p>
+        <hr>
+        <ul class="grid">
+            <li>
+                <i class="fas fa-location-arrow"></i>
+                <h4>Localização</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quisquam molestiae, dolorum ut alias
+                    iure aut ea? Aliquam pariatur possimus eaque ullam tenetur qui! Nihil quas quisquam deserunt sed
+                    incidunt.</p>
+            </li>
+            <li>
+                <i class="fas fa-gift"></i>
+                <h4>Pacotes e Ofertas</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis sint amet libero numquam. Nam,
+                    magnam id. Ratione minus debitis necessitatibus id natus. Adipisci numquam dolore aperiam natus.
+                    Quia, atque sunt!</p>
+            </li>
+            <li>
+                <i class="fas fa-home"></i>
+                <h4>Acomodações</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit quae laboriosam
+                    consequatur, molestiae itaque velit, distinctio facere ipsum architecto, inventore voluptatibus
+                    beatae nemo obcaecati placeat sequi? Error, corporis nostrum.</p>
+            </li>
+        </ul>
+    </section>
+    <section class="newsletter" id="reserva">
+        <h3>Newsletter</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus quasi consectetur error sunt magni aliquam
+            voluptate iusto dolor ipsum, facere libero. Illum impedit aliquam eos, quisquam incidunt unde iure dolor.
+        </p>
+        <hr>
+        <form>
+            <input type="text" placeholder="Email" id="email">
+            <button onclick="cadastrar()">Cadastrar</button>
+        </form>
+    </section>
+    <footer id="contato">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+        </ul>
+        <p>Todos os direitos reservados - Hotel Paraiso 2023</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

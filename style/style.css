@@ -1,0 +1,411 @@
+@charset "UTF-8";
+
+/* PRESET */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/* HEADER */
+header {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header img {
+    width: 250px;
+}
+
+header nav {
+    display: flex;
+}
+
+header li a {
+    color: #191c03;
+}
+
+header li {
+    margin: 0px 15px;
+}
+
+header li:first-child {
+    margin-left: 0px;
+}
+
+header li:last-child {
+    margin-right: 0px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header img {
+        margin-bottom: 15px;
+    }
+}
+
+/* INTRODUCAO */
+.introducao {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.introducao h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.introducao h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.introducao .botao {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px 50px;
+    color: #191c03;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+    .introducao h1 {
+        font-size: 2.5rem;
+    }
+
+    .introducao h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* HOTEL */
+.hotel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.hotel h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #191c03;
+}
+
+.hotel p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #191c03;
+}
+
+.hotel hr {
+    width: 250px;
+    height: 2px;
+    margin-bottom: 70px;
+    background-color: #191c03;
+    border: none;
+}
+
+.hotel .grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotel .grid div.small,
+.hotel .grid div.large {
+    height: 350px;
+    padding: 20px;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.imagem:hover {
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.336);
+}
+
+.hotel .grid div.small {
+    flex-basis: 40%;
+}
+
+.hotel .grid div.large {
+    flex-basis: 60%;
+}
+
+@media (max-width: 700px) {
+
+    .hotel .grid div.small,
+    .hotel .grid div.large {
+        flex-basis: 100%;
+    }
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-imagem {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 70%;
+    max-width: 700px;
+    border-radius: 4px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px
+}
+
+.modal-imagem,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* CARACTERISTICAS */
+.caracteristicas {
+    background-color: #191c03;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.caracteristicas h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+.caracteristicas p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+.caracteristicas hr {
+    width: 250px;
+    height: 2px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    border: none;
+}
+
+.caracteristicas .grid {
+    width: 100%;
+    display: flex;
+}
+
+.caracteristicas .grid li {
+    padding: 0px 30px;
+    text-align: center;
+}
+
+.caracteristicas .grid li i {
+    font-size: 50px;
+    color: #c3c63b;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li h4 {
+    font-size: 1.5rem;
+    color: #c3c63b;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li p {
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .caracteristicas .grid {
+        flex-direction: column;
+    }
+}
+
+/* NEWSLETTER */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.newsletter h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #c3c63b;
+}
+
+.newsletter p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #c3c63b;
+}
+
+.newsletter hr {
+    width: 250px;
+    height: 2px;
+    margin-bottom: 70px;
+    background-color: #c3c63b;
+    border: none;
+}
+
+.newsletter form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
+}
+
+.newsletter form input {
+    padding: 15px;
+    margin-right: 15px;
+    border: 1px solid #c3c63b;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.newsletter form button {
+    padding: 15px;
+    background-color: #c3c63b;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .newsletter form input {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #191c03;
+    padding: 50px 0px;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+footer ul li {
+    margin-right: 10px;
+}
+
+footer ul li:last-child {
+    margin-right: 0px;
+}
+
+footer ul li a {
+    color: #c3c63b;
+    font-size: 2rem;
+}
+
+footer p {
+    color: #c3c63b;
+    text-align: center;
+}
